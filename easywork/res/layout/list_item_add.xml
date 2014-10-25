@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="blocksDescendants" >
+
+    <TextView
+        android:id="@+id/tv_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/listview_item_marginleft"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="@dimen/listview_item_marginTop"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="发如雪"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_filename"
+        android:layout_marginLeft="@dimen/listview_item_marginleft"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:text="周杰伦"
+        android:textSize="14sp" />
+
+    
+    <ImageView
+        android:id="@+id/img_choise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/btn_check_off_disabled_focused_holo_dark" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@id/tv_author"
+        android:paddingLeft="10dip"
+        android:text="04&apos;45&apos;&apos;"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/coral" />
+</RelativeLayout>

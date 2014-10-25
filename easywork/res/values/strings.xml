@@ -1,0 +1,6 @@
+<resources>
+
+    <string name="app_name">Ring</string>
+    <string name="toast_syserror">啊哦，软件出现问题了，请稍候重启</string>
+
+</resources>

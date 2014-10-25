@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:text="随机开关"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#BB0000" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/textView"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="25dp"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/view1"
+        android:text="来电随机开启" />
+
+    <com.ring.ytjojo.view.SlipButton
+        android:id="@+id/view1"
+        android:layout_width="80dip"
+        android:layout_height="48dip"
+        android:layout_below="@+id/line1"
+        android:layout_marginRight="10dp" 
+		android:layout_alignParentRight="true"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/view1"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+         android:layout_alignBaseline="@+id/view2"
+        android:layout_marginLeft="25dp"
+        android:textSize="18sp"
+        android:text="短信随机开启" />
+
+    <com.ring.ytjojo.view.SlipButton
+        android:id="@+id/view2"
+        android:layout_width="120dip"
+        android:layout_height="48dip"
+        android:layout_below="@+id/line2"
+        
+        android:layout_marginRight="10dp" 
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/view2"
+        android:background="?android:attr/listDivider" />
+	<TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line3"
+         android:layout_alignBaseline="@+id/view3"
+        android:layout_marginLeft="25dp"
+        android:textSize="18sp"
+        android:text="墙纸随机开启" />
+
+    <com.ring.ytjojo.view.SlipButton
+        android:id="@+id/view3"
+        android:layout_width="120dip"
+        android:layout_height="48dip"
+        android:layout_below="@+id/line3"
+        
+        android:layout_marginRight="10dp" 
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/view3"
+        android:background="?android:attr/listDivider" />
+
+
+</RelativeLayout>

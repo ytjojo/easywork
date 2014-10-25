@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/com/ring/widget/SlipButton.java" />
+        <ignore path="src/com/ring/ytjojo/drawable/RippleDrawable.java" />
+        <ignore path="src/com/ring/ytjojo/drawable/WaveDrawable.java" />
+        <ignore path="src/com/ring/ytjojo/view/SlipButton.java" />
+    </issue>
+</lint>
