@@ -23,7 +23,7 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
      * Can be used for QueryBuilder and for referencing column names.
     */
     public static class Properties {
-        public final static Property Id = new Property(0, long.class, "id", true, "ID");
+        public final static Property Id = new Property(0, Long.class, "id", true, "_id");
         public final static Property Url = new Property(1, String.class, "url", false, "URL");
         public final static Property Path = new Property(2, String.class, "path", false, "PATH");
         public final static Property Length = new Property(3, Long.class, "length", false, "LENGTH");
@@ -32,6 +32,8 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
         public final static Property IsSucess = new Property(6, Boolean.class, "isSucess", false, "IS_SUCESS");
     };
 
+    private DaoSession daoSession;
+
 
     public FileEntityDao(DaoConfig config) {
         super(config);
@@ -39,13 +41,14 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
     
     public FileEntityDao(DaoConfig config, DaoSession daoSession) {
         super(config, daoSession);
+        this.daoSession = daoSession;
     }
 
     /** Creates the underlying database table. */
     public static void createTable(SQLiteDatabase db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "'FILE_ENTITY' (" + //
-                "'ID' INTEGER PRIMARY KEY NOT NULL UNIQUE ," + // 0: id
+                "'_id' INTEGER PRIMARY KEY ," + // 0: id
                 "'URL' TEXT," + // 1: url
                 "'PATH' TEXT," + // 2: path
                 "'LENGTH' INTEGER," + // 3: length
@@ -64,7 +67,11 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
     @Override
     protected void bindValues(SQLiteStatement stmt, FileEntity entity) {
         stmt.clearBindings();
-        stmt.bindLong(1, entity.getId());
+ 
+        Long id = entity.getId();
+        if (id != null) {
+            stmt.bindLong(1, id);
+        }
  
         String url = entity.getUrl();
         if (url != null) {
@@ -97,17 +104,23 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
         }
     }
 
+    @Override
+    protected void attachEntity(FileEntity entity) {
+        super.attachEntity(entity);
+        entity.__setDaoSession(daoSession);
+    }
+
     /** @inheritdoc */
     @Override
     public Long readKey(Cursor cursor, int offset) {
-        return cursor.getLong(offset + 0);
+        return cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0);
     }    
 
     /** @inheritdoc */
     @Override
     public FileEntity readEntity(Cursor cursor, int offset) {
         FileEntity entity = new FileEntity( //
-            cursor.getLong(offset + 0), // id
+            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // url
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // path
             cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3), // length
@@ -121,7 +134,7 @@ public class FileEntityDao extends AbstractDao<FileEntity, Long> {
     /** @inheritdoc */
     @Override
     public void readEntity(Cursor cursor, FileEntity entity, int offset) {
-        entity.setId(cursor.getLong(offset + 0));
+        entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setUrl(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setPath(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setLength(cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3));

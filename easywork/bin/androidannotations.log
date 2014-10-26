@@ -8305,3 +8305,548 @@ Element (VariableElementImpl): vp
 23:05:33.674 [Worker-25] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.ring.ytjojo.app.AppContext_
 23:05:33.676 [Worker-25] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 29 ms], [Find R Classes = 9 ms], [Extract Annotations = 6 ms], [Extract Manifest = 4 ms], [Process Annotations = 3 ms], [Generate Sources = 3 ms], [Validate Annotations = 2 ms], 
 23:05:33.677 [Worker-25] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:21:39.331 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:21:39.412 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 166 elements
+10:21:39.477 [Worker-3] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:21:39.482 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:21:39.484 [Worker-3] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:21:39.493 [Worker-3] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:21:39.514 [Worker-3] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:21:39.515 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:21:39.517 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:21:39.521 [Worker-3] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:21:39.521 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:21:39.522 [Worker-3] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:21:39.522 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:21:39.522 [Worker-3] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:21:39.522 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:21:39.522 [Worker-3] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:21:39.522 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:21:39.523 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [vp, mListView, mListView, mListview, pagerSlidingTabStrip]
+10:21:39.526 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:21:39.529 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:21:39.531 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mAudioPathType, mFromType, type]
+10:21:39.533 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:21:39.534 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [void initView() , void init() , public void init() , void init() ]
+10:21:39.535 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:21:39.546 [Worker-3] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:21:39.547 [Worker-3] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:21:39.565 [Worker-3] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:21:39.576 [Worker-3] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:21:39.577 [Worker-3] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@795b03cc, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@7dcda639, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@9ea5c71, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@443c095d, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@1cf8c357]
+10:21:39.605 [Worker-3] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.ContentFragment
+Element (VariableElementImpl): vp
+
+
+10:21:39.606 [Worker-3] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 195 ms], [Extract Annotations = 61 ms], [Validate Annotations = 23 ms], [Find R Classes = 22 ms], [Extract Manifest = 7 ms], 
+10:21:39.607 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:21:50.536 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:22:04.594 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:22:04.596 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+10:22:04.624 [Worker-2] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:22:04.627 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:22:04.628 [Worker-2] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:22:04.632 [Worker-2] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:22:04.641 [Worker-2] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:22:04.642 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:22:04.643 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:22:04.644 [Worker-2] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:22:04.644 [Worker-2] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:22:04.645 [Worker-2] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:22:04.645 [Worker-2] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:22:04.645 [Worker-2] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:22:04.645 [Worker-2] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:22:04.645 [Worker-2] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:22:04.645 [Worker-2] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:22:04.646 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [vp, pagerSlidingTabStrip, mListview, mListView, mListView]
+10:22:04.647 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:22:04.648 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:22:04.649 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mAudioPathType, mFromType, type]
+10:22:04.650 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:22:04.651 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void init() , void init() , void initView() , void init() ]
+10:22:04.652 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:22:04.654 [Worker-2] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:22:04.654 [Worker-2] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:22:04.655 [Worker-2] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:22:04.656 [Worker-2] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:22:04.657 [Worker-2] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@4f60b56, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@7d0569eb, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@373cfaf6, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@b8d4071, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@28b1022b]
+10:22:04.659 [Worker-2] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:394)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$3$1.run(Sdk.java:1379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.ContentFragment
+Element (VariableElementImpl): vp
+
+
+10:22:04.659 [Worker-2] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 63 ms], [Extract Annotations = 26 ms], [Find R Classes = 13 ms], [Validate Annotations = 12 ms], [Extract Manifest = 4 ms], 
+10:22:04.660 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:22:05.452 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:23:04.792 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:23:04.794 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 161 elements
+10:23:04.860 [Worker-4] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:23:04.864 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:23:04.865 [Worker-4] ERROR o.a.r.ProjectRClassFinder:46 - The generated com.example.randomringapp.R class cannot be found
+10:23:04.866 [Worker-4] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:23:04.876 [Worker-4] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 82 ms], [Extract Annotations = 64 ms], [Extract Manifest = 4 ms], 
+10:23:04.877 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:25:14.824 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:25:14.826 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 161 elements
+10:25:14.847 [Worker-3] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:25:14.850 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:25:14.852 [Worker-3] ERROR o.a.r.ProjectRClassFinder:46 - The generated com.example.randomringapp.R class cannot be found
+10:25:14.853 [Worker-3] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:25:14.904 [Worker-3] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 78 ms], [Extract Annotations = 20 ms], [Extract Manifest = 3 ms], 
+10:25:14.906 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:27:23.875 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:27:23.877 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+10:27:23.898 [Worker-6] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:27:23.901 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:27:23.902 [Worker-6] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:27:23.907 [Worker-6] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:27:23.914 [Worker-6] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:27:23.916 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:27:23.917 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:27:23.918 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:23.918 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:23.918 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:23.918 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:23.919 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:23.919 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:23.920 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:23.920 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:23.920 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [pagerSlidingTabStrip, mListView, mListview, mListView, vp]
+10:27:23.922 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:27:23.924 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:27:23.925 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mAudioPathType, type, mFromType]
+10:27:23.926 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:27:23.927 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [void init() , void init() , public void init() , void initView() ]
+10:27:23.928 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:27:23.929 [Worker-6] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:27:23.930 [Worker-6] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:27:23.931 [Worker-6] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:27:23.932 [Worker-6] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:27:23.933 [Worker-6] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@932315b, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@7d0e5c9d, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@41441dc, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@5bec65c8, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@1720a6e1]
+10:27:23.935 [Worker-6] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:394)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$3$1.run(Sdk.java:1379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.ContentFragment
+Element (VariableElementImpl): pagerSlidingTabStrip
+
+
+10:27:23.936 [Worker-6] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 59 ms], [Extract Annotations = 20 ms], [Validate Annotations = 15 ms], [Find R Classes = 12 ms], [Extract Manifest = 3 ms], 
+10:27:23.937 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:27:24.784 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:27:48.608 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:27:48.610 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+10:27:48.630 [Worker-4] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:27:48.634 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:27:48.635 [Worker-4] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:27:48.638 [Worker-4] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:27:48.643 [Worker-4] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:27:48.644 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:27:48.644 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:27:48.645 [Worker-4] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:48.646 [Worker-4] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:48.646 [Worker-4] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:48.646 [Worker-4] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:48.646 [Worker-4] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:48.646 [Worker-4] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:48.647 [Worker-4] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:27:48.647 [Worker-4] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:27:48.647 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [mListView, mListView, pagerSlidingTabStrip, mListview, vp]
+10:27:48.649 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:27:48.650 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:27:48.652 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mAudioPathType, mFromType, type]
+10:27:48.653 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:27:48.654 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void init() , void init() , void init() , void initView() ]
+10:27:48.655 [Worker-4] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:27:48.656 [Worker-4] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:27:48.657 [Worker-4] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:27:48.658 [Worker-4] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:27:48.659 [Worker-4] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:27:48.660 [Worker-4] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@39052c88, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@2f18fa93, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@3809c1e7, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@10eae10d, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@4cfc6f1d]
+10:27:48.662 [Worker-4] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:394)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$3$1.run(Sdk.java:1379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.SelectRingFragment
+Element (VariableElementImpl): mListView
+
+
+10:27:48.662 [Worker-4] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 52 ms], [Extract Annotations = 19 ms], [Validate Annotations = 13 ms], [Find R Classes = 8 ms], [Extract Manifest = 4 ms], 
+10:27:48.663 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:27:49.427 [Worker-4] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:28:52.778 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:28:52.780 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+10:28:52.806 [Worker-6] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:28:52.809 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:28:52.810 [Worker-6] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:28:52.815 [Worker-6] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:28:52.819 [Worker-6] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:28:52.820 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:28:52.821 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:28:52.824 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:28:52.824 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:28:52.824 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:28:52.825 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:28:52.825 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:28:52.825 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:28:52.825 [Worker-6] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:28:52.825 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:28:52.826 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [vp, mListview, pagerSlidingTabStrip, mListView, mListView]
+10:28:52.827 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:28:52.828 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:28:52.830 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [type, mFromType, mAudioPathType]
+10:28:52.831 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:28:52.832 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [void init() , void initView() , void init() , public void init() ]
+10:28:52.833 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:28:52.834 [Worker-6] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:28:52.835 [Worker-6] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:28:52.836 [Worker-6] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:28:52.837 [Worker-6] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:28:52.838 [Worker-6] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@748256f6, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@47d1be3f, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@191b6c3c, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@3ea917ac, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@354490a3]
+10:28:52.840 [Worker-6] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:394)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$3$1.run(Sdk.java:1379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.ContentFragment
+Element (VariableElementImpl): vp
+
+
+10:28:52.841 [Worker-6] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 61 ms], [Extract Annotations = 24 ms], [Validate Annotations = 15 ms], [Find R Classes = 9 ms], [Extract Manifest = 4 ms], 
+10:28:52.841 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:28:53.607 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:37:59.963 [Worker-8] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+10:38:00.50 [Worker-8] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+10:38:00.152 [Worker-8] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+10:38:00.158 [Worker-8] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+10:38:00.160 [Worker-8] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+10:38:00.172 [Worker-8] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+10:38:00.201 [Worker-8] INFO  o.a.p.ModelValidator:42 - Validating elements
+10:38:00.203 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:38:00.205 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+10:38:00.210 [Worker-8] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:38:00.211 [Worker-8] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:38:00.211 [Worker-8] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:38:00.211 [Worker-8] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:38:00.212 [Worker-8] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:38:00.212 [Worker-8] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:38:00.212 [Worker-8] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+10:38:00.212 [Worker-8] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+10:38:00.213 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [mListView, mListview, mListView, pagerSlidingTabStrip, vp]
+10:38:00.216 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+10:38:00.220 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+10:38:00.223 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mFromType, mAudioPathType, type]
+10:38:00.225 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+10:38:00.227 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [void init() , void init() , void initView() , public void init() ]
+10:38:00.229 [Worker-8] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+10:38:00.241 [Worker-8] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+10:38:00.242 [Worker-8] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+10:38:00.263 [Worker-8] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+10:38:00.276 [Worker-8] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+10:38:00.277 [Worker-8] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@3ff2ead, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@3ea6f51c, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@116f7c56, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@5369867, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@2e4bfb0b]
+10:38:00.282 [Worker-8] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.RingListFragment
+Element (VariableElementImpl): mListview
+
+
+10:38:00.283 [Worker-8] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 234 ms], [Extract Annotations = 99 ms], [Validate Annotations = 29 ms], [Find R Classes = 26 ms], [Extract Manifest = 7 ms], 
+10:38:00.284 [Worker-8] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+10:55:38.906 [Worker-14] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+11:03:56.222 [Worker-16] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+11:04:06.971 [Worker-22] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+11:04:08.245 [Worker-18] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+11:05:55.861 [Worker-24] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}
+11:05:55.863 [Worker-24] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 9 annotations on 162 elements
+11:05:55.897 [Worker-24] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder E:\gitHome\easywork: E:\gitHome\easywork\AndroidManifest.xml
+11:05:55.900 [Worker-24] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.randomringapp, componentQualifiedNames=[com.ring.ytjojo.UI.AppStart, com.ring.ytjojo.UI.MainActivity, com.ring.ytjojo.UI.AudioSelectActivity, com.ring.ytjojo.service.PlayService, com.ring.ytjojo.service.BackgroudService, com.ring.ytjojo.service.RingStoneSetService, com.ring.ytjojo.receiver.PhoneStateReceiver, com.ring.ytjojo.receiver.SMSReceiver, com.ring.ytjojo.receiver.BootReceiver], permissionQualifiedNames=[android.permission.RECEIVE_SMS, android.permission.INTERNET, android.permission.READ_PHONE_STATE, android.permission.MOUNT_UNMOUNT_FILESYSTEMS, android.permission.WRITE_SETTINGS, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.RECEIVE_BOOT_COMPLETED], applicationClassName=com.ring.ytjojo.app.AppContext_, libraryProject=false, debugabble=false, minSdkVersion=10, maxSdkVersion=-1, targetSdkVersion=17]
+11:05:55.902 [Worker-24] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.randomringapp.R
+11:05:55.907 [Worker-24] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+11:05:55.917 [Worker-24] INFO  o.a.p.ModelValidator:42 - Validating elements
+11:05:55.918 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+11:05:55.919 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.ring.ytjojo.fragment.SelectRingFragment, com.ring.ytjojo.fragment.WallpaperFragment, com.ring.ytjojo.fragment.RingListFragment, com.ring.ytjojo.fragment.ContentFragment, com.ring.ytjojo.fragment.MenuFragment]
+11:05:55.920 [Worker-24] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+11:05:55.920 [Worker-24] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+11:05:55.921 [Worker-24] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+11:05:55.921 [Worker-24] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+11:05:55.921 [Worker-24] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+11:05:55.921 [Worker-24] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+11:05:55.921 [Worker-24] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.EFragment can only be used on an element that extends one of the following classes: [android.app.Fragment, android.support.v4.app.Fragment]
+11:05:55.921 [Worker-24] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+11:05:55.922 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [vp, mListView, mListView, pagerSlidingTabStrip, mListview]
+11:05:55.923 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with ItemClickHandler: [void chosenListViewItemClicked(com.ring.ytjojo.model.Song) ]
+11:05:55.924 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with ItemLongClickHandler: [void chosenListViewItemLongClicked(com.ring.ytjojo.model.Song) ]
+11:05:55.926 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with FragmentArgHandler: [mAudioPathType, type, mFromType]
+11:05:55.927 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with AppHandler: [app, app]
+11:05:55.928 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [void init() , void init() , void initView() , public void init() ]
+11:05:55.929 [Worker-24] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [void asynQueryDataBase() ]
+11:05:55.930 [Worker-24] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+11:05:55.931 [Worker-24] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EApplicationHandler: [com.ring.ytjojo.app.AppContext]
+11:05:55.932 [Worker-24] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.ring.ytjojo.fragment.MenuFragment]
+11:05:55.933 [Worker-24] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+11:05:55.934 [Worker-24] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@5dc65f06, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@57344b40, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@23fd9707, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@67650717, org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@2245119b]
+11:05:55.936 [Worker-24] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.1!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.NullPointerException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: unknown
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.NullPointerException
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:74)
+	at org.androidannotations.handler.ViewByIdHandler.process(ViewByIdHandler.java:36)
+	at org.androidannotations.process.ModelProcessor.processThrowing(ModelProcessor.java:136)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:120)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:365)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:302)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:394)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$3$1.run(Sdk.java:1379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Thrown from: com.ring.ytjojo.fragment.ContentFragment
+Element (VariableElementImpl): vp
+
+
+11:05:55.936 [Worker-24] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 73 ms], [Extract Annotations = 33 ms], [Find R Classes = 15 ms], [Validate Annotations = 13 ms], [Extract Manifest = 3 ms], 
+11:05:55.937 [Worker-24] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+11:05:56.882 [Worker-24] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {phase=BUILD}

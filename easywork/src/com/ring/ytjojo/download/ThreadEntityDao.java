@@ -1,12 +1,17 @@
 package com.ring.ytjojo.download;
 
+import java.util.List;
+import java.util.ArrayList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 
 import de.greenrobot.dao.AbstractDao;
 import de.greenrobot.dao.Property;
+import de.greenrobot.dao.internal.SqlUtils;
 import de.greenrobot.dao.internal.DaoConfig;
+import de.greenrobot.dao.query.Query;
+import de.greenrobot.dao.query.QueryBuilder;
 
 import com.ring.ytjojo.download.ThreadEntity;
 
@@ -14,7 +19,7 @@ import com.ring.ytjojo.download.ThreadEntity;
 /** 
  * DAO for table THREAD_ENTITY.
 */
-public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
+public class ThreadEntityDao extends AbstractDao<ThreadEntity, Void> {
 
     public static final String TABLENAME = "THREAD_ENTITY";
 
@@ -23,12 +28,15 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
      * Can be used for QueryBuilder and for referencing column names.
     */
     public static class Properties {
-        public final static Property Id = new Property(0, long.class, "id", true, "ID");
+        public final static Property Id = new Property(0, Long.class, "id", false, "ID");
         public final static Property Start = new Property(1, Long.class, "start", false, "START");
         public final static Property End = new Property(2, Long.class, "end", false, "END");
         public final static Property Load = new Property(3, Long.class, "load", false, "LOAD");
     };
 
+    private DaoSession daoSession;
+
+    private Query<ThreadEntity> fileEntity_ThreadEntityListQuery;
 
     public ThreadEntityDao(DaoConfig config) {
         super(config);
@@ -36,13 +44,14 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
     
     public ThreadEntityDao(DaoConfig config, DaoSession daoSession) {
         super(config, daoSession);
+        this.daoSession = daoSession;
     }
 
     /** Creates the underlying database table. */
     public static void createTable(SQLiteDatabase db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "'THREAD_ENTITY' (" + //
-                "'ID' INTEGER PRIMARY KEY NOT NULL ," + // 0: id
+                "'ID' INTEGER," + // 0: id
                 "'START' INTEGER," + // 1: start
                 "'END' INTEGER," + // 2: end
                 "'LOAD' INTEGER);"); // 3: load
@@ -58,7 +67,11 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
     @Override
     protected void bindValues(SQLiteStatement stmt, ThreadEntity entity) {
         stmt.clearBindings();
-        stmt.bindLong(1, entity.getId());
+ 
+        Long id = entity.getId();
+        if (id != null) {
+            stmt.bindLong(1, id);
+        }
  
         Long start = entity.getStart();
         if (start != null) {
@@ -76,17 +89,23 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
         }
     }
 
+    @Override
+    protected void attachEntity(ThreadEntity entity) {
+        super.attachEntity(entity);
+        entity.__setDaoSession(daoSession);
+    }
+
     /** @inheritdoc */
     @Override
-    public Long readKey(Cursor cursor, int offset) {
-        return cursor.getLong(offset + 0);
+    public Void readKey(Cursor cursor, int offset) {
+        return null;
     }    
 
     /** @inheritdoc */
     @Override
     public ThreadEntity readEntity(Cursor cursor, int offset) {
         ThreadEntity entity = new ThreadEntity( //
-            cursor.getLong(offset + 0), // id
+            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             cursor.isNull(offset + 1) ? null : cursor.getLong(offset + 1), // start
             cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2), // end
             cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3) // load
@@ -97,7 +116,7 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
     /** @inheritdoc */
     @Override
     public void readEntity(Cursor cursor, ThreadEntity entity, int offset) {
-        entity.setId(cursor.getLong(offset + 0));
+        entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setStart(cursor.isNull(offset + 1) ? null : cursor.getLong(offset + 1));
         entity.setEnd(cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2));
         entity.setLoad(cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3));
@@ -105,19 +124,15 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
     
     /** @inheritdoc */
     @Override
-    protected Long updateKeyAfterInsert(ThreadEntity entity, long rowId) {
-        entity.setId(rowId);
-        return rowId;
+    protected Void updateKeyAfterInsert(ThreadEntity entity, long rowId) {
+        // Unsupported or missing PK type
+        return null;
     }
     
     /** @inheritdoc */
     @Override
-    public Long getKey(ThreadEntity entity) {
-        if(entity != null) {
-            return entity.getId();
-        } else {
-            return null;
-        }
+    public Void getKey(ThreadEntity entity) {
+        return null;
     }
 
     /** @inheritdoc */
@@ -126,4 +141,109 @@ public class ThreadEntityDao extends AbstractDao<ThreadEntity, Long> {
         return true;
     }
     
+    /** Internal query to resolve the "threadEntityList" to-many relationship of FileEntity. */
+    public List<ThreadEntity> _queryFileEntity_ThreadEntityList(Long id) {
+        synchronized (this) {
+            if (fileEntity_ThreadEntityListQuery == null) {
+                QueryBuilder<ThreadEntity> queryBuilder = queryBuilder();
+                queryBuilder.where(Properties.Id.eq(null));
+                fileEntity_ThreadEntityListQuery = queryBuilder.build();
+            }
+        }
+        Query<ThreadEntity> query = fileEntity_ThreadEntityListQuery.forCurrentThread();
+        query.setParameter(0, id);
+        return query.list();
+    }
+
+    private String selectDeep;
+
+    protected String getSelectDeep() {
+        if (selectDeep == null) {
+            StringBuilder builder = new StringBuilder("SELECT ");
+            SqlUtils.appendColumns(builder, "T", getAllColumns());
+            builder.append(',');
+            SqlUtils.appendColumns(builder, "T0", daoSession.getFileEntityDao().getAllColumns());
+            builder.append(" FROM THREAD_ENTITY T");
+            builder.append(" LEFT JOIN FILE_ENTITY T0 ON T.'ID'=T0.'_id'");
+            builder.append(' ');
+            selectDeep = builder.toString();
+        }
+        return selectDeep;
+    }
+    
+    protected ThreadEntity loadCurrentDeep(Cursor cursor, boolean lock) {
+        ThreadEntity entity = loadCurrent(cursor, 0, lock);
+        int offset = getAllColumns().length;
+
+        FileEntity fileEntity = loadCurrentOther(daoSession.getFileEntityDao(), cursor, offset);
+        entity.setFileEntity(fileEntity);
+
+        return entity;    
+    }
+
+    public ThreadEntity loadDeep(Long key) {
+        assertSinglePk();
+        if (key == null) {
+            return null;
+        }
+
+        StringBuilder builder = new StringBuilder(getSelectDeep());
+        builder.append("WHERE ");
+        SqlUtils.appendColumnsEqValue(builder, "T", getPkColumns());
+        String sql = builder.toString();
+        
+        String[] keyArray = new String[] { key.toString() };
+        Cursor cursor = db.rawQuery(sql, keyArray);
+        
+        try {
+            boolean available = cursor.moveToFirst();
+            if (!available) {
+                return null;
+            } else if (!cursor.isLast()) {
+                throw new IllegalStateException("Expected unique result, but count was " + cursor.getCount());
+            }
+            return loadCurrentDeep(cursor, true);
+        } finally {
+            cursor.close();
+        }
+    }
+    
+    /** Reads all available rows from the given cursor and returns a list of new ImageTO objects. */
+    public List<ThreadEntity> loadAllDeepFromCursor(Cursor cursor) {
+        int count = cursor.getCount();
+        List<ThreadEntity> list = new ArrayList<ThreadEntity>(count);
+        
+        if (cursor.moveToFirst()) {
+            if (identityScope != null) {
+                identityScope.lock();
+                identityScope.reserveRoom(count);
+            }
+            try {
+                do {
+                    list.add(loadCurrentDeep(cursor, false));
+                } while (cursor.moveToNext());
+            } finally {
+                if (identityScope != null) {
+                    identityScope.unlock();
+                }
+            }
+        }
+        return list;
+    }
+    
+    protected List<ThreadEntity> loadDeepAllAndCloseCursor(Cursor cursor) {
+        try {
+            return loadAllDeepFromCursor(cursor);
+        } finally {
+            cursor.close();
+        }
+    }
+    
+
+    /** A raw-style query where you can pass any WHERE clause and arguments. */
+    public List<ThreadEntity> queryDeep(String where, String... selectionArg) {
+        Cursor cursor = db.rawQuery(getSelectDeep() + where, selectionArg);
+        return loadDeepAllAndCloseCursor(cursor);
+    }
+ 
 }
