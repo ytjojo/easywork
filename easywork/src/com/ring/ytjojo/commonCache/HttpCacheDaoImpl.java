@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.ring.ytjojo.database.DBManager;
-import com.ring.ytjojo.utill.StringUtils;
-import com.ring.ytjojo.utill.TimeUtils;
+import com.ring.ytjojo.util.StringUtils;
+import com.ring.ytjojo.util.TimeUtils;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -1,7 +1,7 @@
 package com.ring.ytjojo.receiver;
 
 import com.ring.ytjojo.service.RingStoneSetService;
-import com.ring.ytjojo.utill.SharePreferenceUtil;
+import com.ring.ytjojo.util.SharePreferenceUtil;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

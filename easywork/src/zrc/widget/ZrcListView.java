@@ -3,7 +3,7 @@ package zrc.widget;
 import java.util.ArrayList;
 
 import com.example.randomringapp.R;
-import com.ring.ytjojo.utill.APIUtil;
+import com.ring.ytjojo.util.APIUtil;
 
 import android.annotation.TargetApi;
 import android.content.Context;

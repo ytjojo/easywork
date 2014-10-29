@@ -12,7 +12,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.ring.ytjojo.utill.NetWorkUtils;
+import com.ring.ytjojo.util.NetWorkUtils;
 
 import java.util.HashMap;
 import java.util.Map;

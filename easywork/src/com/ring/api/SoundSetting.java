@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.Random;
 
 import com.ring.ytjojo.app.ICONST;
-import com.ring.ytjojo.utill.SharePreferenceUtil;
+import com.ring.ytjojo.util.SharePreferenceUtil;
 
 
 

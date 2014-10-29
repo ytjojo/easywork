@@ -26,8 +26,8 @@ import com.ring.ytjojo.app.AppContext;
 import com.ring.ytjojo.app.ICONST;
 import com.ring.ytjojo.model.Song;
 import com.ring.ytjojo.service.PlayService;
-import com.ring.ytjojo.utill.AudioUtills;
-import com.ring.ytjojo.utill.ListUtil;
+import com.ring.ytjojo.util.AudioUtills;
+import com.ring.ytjojo.util.ListUtil;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

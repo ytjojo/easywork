@@ -8,8 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import com.ring.ytjojo.utill.StringUtils;
-import com.ring.ytjojo.utill.SystemUtils;
+import com.ring.ytjojo.util.StringUtils;
+import com.ring.ytjojo.util.SystemUtils;
 
 import android.content.Context;
 import android.os.AsyncTask;

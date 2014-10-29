@@ -66,8 +66,8 @@ public final class ContentFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        pagerSlidingTabStrip = ((PagerSlidingTabStrip) hasViews.findViewById(com.example.randomringapp.R.id.slidingTabStrip_2));
         vp = ((ViewPager) hasViews.findViewById(com.example.randomringapp.R.id.content_viewpager));
+        pagerSlidingTabStrip = ((PagerSlidingTabStrip) hasViews.findViewById(com.example.randomringapp.R.id.slidingTabStrip_2));
         init();
     }
 

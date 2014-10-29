@@ -1,7 +1,7 @@
 package com.ring.widget;
 
 
-import com.ring.ytjojo.utill.DisplayUtils;
+import com.ring.ytjojo.util.DisplayUtils;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -10,8 +10,8 @@ import org.apache.http.entity.mime.MinimalField;
 import com.ring.ytjojo.UI.MainActivity;
 import com.ring.ytjojo.database.DBManager;
 import com.ring.ytjojo.model.Song;
-import com.ring.ytjojo.utill.AudioUtills;
-import com.ring.ytjojo.utill.SharePreferenceUtil;
+import com.ring.ytjojo.util.AudioUtills;
+import com.ring.ytjojo.util.SharePreferenceUtil;
 
 import android.app.Application;
 import android.content.Intent;

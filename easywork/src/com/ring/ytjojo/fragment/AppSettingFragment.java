@@ -1,7 +1,7 @@
 package com.ring.ytjojo.fragment;
 
 import com.example.randomringapp.R;
-import com.ring.ytjojo.utill.SharePreferenceUtil;
+import com.ring.ytjojo.util.SharePreferenceUtil;
 import com.ring.ytjojo.view.SlipButton;
 
 import android.content.Intent;

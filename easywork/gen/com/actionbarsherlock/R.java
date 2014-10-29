@@ -307,8 +307,8 @@ public final class R {
 		public static final int abs__textfield_searchview_right_holo_dark = 0x7f02006d;
 		public static final int abs__textfield_searchview_right_holo_light = 0x7f02006e;
 		public static final int abs__toast_frame = 0x7f02006f;
-		public static final int fab__gradient = 0x7f020080;
-		public static final int fab__gradient_light = 0x7f020081;
+		public static final int fab__gradient = 0x7f020086;
+		public static final int fab__gradient_light = 0x7f020087;
 	}
 	public static final class id {
 		public static final int abs__action_bar = 0x7f090041;
@@ -627,7 +627,7 @@ public final class R {
 		public static final int SherlockSearchView_android_maxWidth = 0;
 		public static final int SherlockSearchView_iconifiedByDefault = 3;
 		public static final int SherlockSearchView_queryHint = 4;
-		public static final int[] SherlockSpinner = { 0x010100af, 0x01010175, 0x01010176, 0x0101017b, 0x01010262, 0x010102ac, 0x010102ad, 0x0101043d };
+		public static final int[] SherlockSpinner = { 0x010100af, 0x01010175, 0x01010176, 0x0101017b, 0x01010262, 0x010102ac, 0x010102ad, 0x0101043a };
 		public static final int SherlockSpinner_android_dropDownHorizontalOffset = 5;
 		public static final int SherlockSpinner_android_dropDownSelector = 1;
 		public static final int SherlockSpinner_android_dropDownVerticalOffset = 6;

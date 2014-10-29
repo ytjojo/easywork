@@ -34,8 +34,8 @@ import android.view.TextureView;
 import com.ring.ytjojo.app.AppContext;
 import com.ring.ytjojo.app.Constants;
 import com.ring.ytjojo.helper.NotificationHelper;
-import com.ring.ytjojo.utill.Handler_File;
-import com.ring.ytjojo.utill.L;
+import com.ring.ytjojo.util.Handler_File;
+import com.ring.ytjojo.util.L;
 
 import de.greenrobot.daogenerator.Entity;
 import de.greenrobot.event.EventBus;
